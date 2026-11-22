@@ -1940,7 +1940,8 @@ function noteHead(text) {
 }
 
 function sectionNote(d, key) {
-  if (key === 'about') return str(d.note).trim() || DEFAULT_NOTE;
+  // about: 생략·빈 문자열이면 기본 문구, false 면 안내문 없음(noteHead 가 showRight 를 끈다).
+  if (key === 'about') return d.note === false ? '' : str(d.note).trim() || DEFAULT_NOTE;
   return str(d[RESUME_NOTE_KEY[key]]);
 }
 

@@ -260,7 +260,7 @@ function layResume(d){
   let y=233;
   for(const key of order){
     const S=RS[key]; if(!S) continue; const items=S.items(r); if(!items.length) continue;
-    const nt = key==='about' ? (r.note||DEFAULT_NOTE) : r[S.noteKey];
+    const nt = key==='about' ? (r.note===false ? '' : (r.note||DEFAULT_NOTE)) : r[S.noteKey];
     // 섹션 제목 (52,T) 32/38 · 밑줄 2px (52,T+38)→1133 · 우측 슬롯 Note: 캡션 글자 위치를 원본에 맞춰 T-10
     const head=(T,withNote)=>{ const a=[put(pg,`<h2 class="t-section" style="white-space:nowrap">${esc(S.title)}</h2>`,52,T), put(pg,'<div class="r-rule"></div>',52,T+38,1081)]; if(withNote&&nt) a.push(putR(pg,note(nt),1190-1133,T-10)); return a; };
     let hs=head(y,true), cy=y+38+S.g, placed=0;
