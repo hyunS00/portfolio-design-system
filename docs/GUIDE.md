@@ -143,6 +143,7 @@ JSON 최상위에 `theme` 을 넣으면 Build all·Fill 을 시작할 때 `KB To
 **이력서.**
 
 - 헤더: 이름 (55,37) 71/83, 태그라인 y=127 22/26 강조색. 연락처(`Atom/Contact`)는 페이지 절대 위치로 오른쪽 끝 1133, y=214 에 고정합니다.
+- `profile.blog` 는 선택입니다. 없거나 `label`·`url` 이 둘 다 비면 연락처의 blog 칸과 바로 앞 구분선을 숨기고, 줄어든 폭으로 오른쪽 끝 1133 을 다시 맞춥니다. 자기소개서 연락처도 같고, 포트폴리오 표지 연락처 표는 blog 라벨 줄과 값 줄을 함께 숨깁니다.
 - 섹션은 `resume.sections` 순서로 쌓습니다(`education`, `about`, `experience`, `project`, `skill`). 생략하면 SPEC2 기본 순서인 education → about → experience → project → skill 입니다. 데이터가 없는 섹션은 건너뜁니다. A형처럼 쓰려면 `"sections": ["about","experience","education"]` 를 넣으세요.
 - 섹션 제목(32/38)과 밑줄(2px)은 x 52 → 1133 입니다(이력서 페이지 좌우 여백 52·57). 첫 섹션 제목 y=233, 이어지는 장은 44, 섹션 사이 36(마지막 항목 바닥 → 다음 제목).
 - 밑줄 위쪽 → 첫 항목 위쪽 간격은 education 20, about 27, experience 36, project 39, skill 36 입니다(제목 top + 38 + 간격).

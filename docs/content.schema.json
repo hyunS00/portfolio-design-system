@@ -15,8 +15,7 @@
         "name",
         "email",
         "phone",
-        "github",
-        "blog"
+        "github"
       ],
       "properties": {
         "name": {
@@ -58,10 +57,7 @@
         },
         "blog": {
           "type": "object",
-          "required": [
-            "label",
-            "url"
-          ],
+          "description": "선택. 비우면 연락처에서 숨김",
           "properties": {
             "label": {
               "type": "string",
